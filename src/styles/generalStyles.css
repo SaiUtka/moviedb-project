@@ -1,0 +1,17 @@
+body {
+    background-color: #ccccce;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1, h2, h3, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

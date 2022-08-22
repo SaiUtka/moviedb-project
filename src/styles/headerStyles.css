@@ -1,0 +1,268 @@
+.header {
+    padding: 30px;
+    height: 100px;
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    color: #ccccce;
+    overflow: hidden;
+}
+
+.header_wrapper {
+    width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_logo {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: no-repeat center/120% url("https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg");
+}
+
+.header_items {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.header_list {
+    display: flex;
+    list-style: none;
+    column-gap: 90px;
+    font-size: 30px;
+}
+
+.header_list_link {
+    text-decoration: none;
+    color: #ccccce;
+    transition: 0.3s;
+}
+
+.header_list_link:hover {
+    border-bottom: 2px solid #ccccce;
+    transition: 0.3s;
+    font-size: 40px;
+}
+
+.search_container {
+    padding: 10px 0;
+
+
+}
+
+.search_container > input {
+    border: 0;
+    border-bottom: 2px solid aliceblue;
+    background-color: transparent;
+    padding: 10px 0;
+    /*border-radius: 10px;*/
+    color: aliceblue;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.search_container > input:focus {
+    outline: 0;
+}
+
+
+/*//////////////////////////////// - MEDIA - ///////////////////////////////*/
+
+@media (max-width: 1199px) {
+
+    .header_wrapper {
+        width: 900px;
+    }
+
+    .header_logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header_list {
+        column-gap: 60px;
+        font-size: 25px;
+    }
+
+    .header_list_link:hover {
+        font-size: 30px;
+    }
+
+    .search_container {
+        padding: 0;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .header_wrapper {
+        width: 700px;
+    }
+
+    .header_list {
+        column-gap: 45px;
+        font-size: 20px;
+    }
+
+    .header_list_link:hover {
+        font-size: 25px;
+    }
+
+    .search_container > input {
+        width: 130px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .header {
+        height: 70px;
+    }
+
+    .header_wrapper {
+        width: 500px;
+    }
+
+    .header_logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .header_items {
+        width: 87%;
+    }
+
+    .header_list {
+        column-gap: 35px;
+        font-size: 15px;
+    }
+
+    .header_list_link:hover {
+        font-size: 18px;
+    }
+
+    .search_container > input {
+        width: 95px;
+        font-size: 13px;
+        padding: 5px 0;
+        border-bottom: 1px solid aliceblue;
+
+    }
+}
+
+@media (max-width: 550px) {
+
+    .header {
+        height: 60px;
+    }
+
+    .header_wrapper {
+        width: 400px;
+    }
+
+    .header_logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header_items {
+        width: 85%;
+    }
+
+    .header_list {
+        column-gap: 14px;
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .header_list_link:hover {
+        font-size: 16px;
+    }
+
+
+    .search_container > input {
+        width: 70px;
+        font-size: 11px;
+
+    }
+}
+
+@media (max-width: 434px) {
+
+    .header {
+        height: 50px;
+    }
+
+    .header_wrapper {
+        width: 320px;
+    }
+
+    .header_logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header_items {
+        width: 87%;
+    }
+
+    .header_list {
+        column-gap: 10px;
+        font-size: 11px;
+    }
+
+    .header_list_link:hover {
+        font-size: 12px;
+    }
+
+    .search_container > input {
+        width: 50px;
+        font-size: 9px;
+
+    }
+}
+
+@media (max-width: 356px) {
+
+    .header {
+        height: 40px;
+    }
+
+    .header_wrapper {
+        width: 300px;
+    }
+
+    .header_logo {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header_items {
+        width: 87%;
+    }
+
+    .header_list {
+        column-gap: 9px;
+        font-size: 10px;
+        padding: 0 10px;
+    }
+
+    .header_list_link:hover {
+        font-size: 11px;
+    }
+
+
+    .search_container > input {
+        width: 40px;
+        font-size: 8px;
+
+    }
+}

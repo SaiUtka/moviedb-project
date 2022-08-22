@@ -1,0 +1,13 @@
+.pagination_btn {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    padding-bottom: 20px;
+
+}
+
+.pagination_btn > button {
+    font-size: 40px;
+    border: 0;
+    background-color: inherit;
+}
