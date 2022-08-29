@@ -99,6 +99,8 @@
     bottom: 25%;
     z-index: 100;
     width: 60%;
+    display: flex;
+    justify-content: center;
 }
 
 .trailer_container {
@@ -186,6 +188,12 @@
         width: 200%;
     }
 
+    .trailer_error {
+        font-size: 45px;
+        padding: 2px;
+    }
+
+
 }
 
 
@@ -222,6 +230,10 @@
         width: 140%;
     }
 
+    .trailer_error {
+        font-size: 40px;
+    }
+
 }
 
 @media (max-width: 550px) {
@@ -254,10 +266,6 @@
         font-size: 25px;
     }
 
-    .background {
-        /*height: 100vh;*/
-    }
-
     .movie_description p {
         font-size: 10px;
     }
@@ -269,6 +277,9 @@
     .movie_description > .genres_container > .genres {
         padding: 4px 6px;
         font-size: 8px;
+    }
+    .trailer_error {
+        font-size: 30px;
     }
 
 }
