@@ -22,6 +22,8 @@ function MoviePage() {
 
     const searchMovies = useSelector(state => state.searchMovieReducer.movies.results);
 
+    const isLoading = useSelector(state => state.movieReducer.isLoading);
+
     useEffect(() => {
         dispatch(getSearchMovies({value, page}));
     }, [dispatch, page, value]);
@@ -34,7 +36,7 @@ function MoviePage() {
         <div>
             <div className={'movie_card_wrapper'}>
                 {
-                    useSelector(state => state.toolsReducer.value) ?
+                    isLoading ? <h1>Loading...</h1> : value ?
                         searchMovies && searchMovies.map(movie => <MovieCard key={movie.id} movie={movie}/>)
                         : movies && movies.map(movie => <MovieCard key={movie.id} movie={movie}/>)
                 }

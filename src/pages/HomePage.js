@@ -17,6 +17,8 @@ function HomePage() {
 
     const searchMovies = useSelector(state => state.searchMovieReducer.movies.results);
 
+    const isLoading = useSelector(state => state.homePageReducer.isLoading)
+
     useEffect(() => {
         dispatch(getHomePageMovies({page}));
     }, [page, dispatch]);
@@ -29,9 +31,8 @@ function HomePage() {
         <div>
             <div className={'movie_card_wrapper'}>
                 {
-
-                    useSelector(state => state.toolsReducer.value) ?
-                        searchMovies && searchMovies.map(movie => <MovieCard key={movie.id} movie={movie}/>)
+                    isLoading ? <h1>Loading...</h1> :
+                    value ? searchMovies && searchMovies.map(movie => <MovieCard key={movie.id} movie={movie}/>)
                         : homePageMovies && homePageMovies.map(movie => <InCinemaNow key={movie.id} movie={movie}/>)
                 }
             </div>

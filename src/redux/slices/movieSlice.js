@@ -17,12 +17,17 @@ const getMovies = createAsyncThunk(
 const movieSlice = createSlice({
     name: 'movieSlice',
     initialState: {
-        movies: []
+        movies: [],
+        isLoading: false
     },
     reducers: {},
     extraReducers: {
         [getMovies.fulfilled]: (state, action) => {
+            state.isLoading = false
             state.movies = action.payload;
+        },
+        [getMovies.pending]: (state) => {
+            state.isLoading = true
         }
     }
 });

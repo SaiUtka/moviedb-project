@@ -17,12 +17,17 @@ const getHomePageMovies = createAsyncThunk(
 const homePageMovieSlice = createSlice({
     name: 'homePageMovieSlice',
     initialState: {
-        movies: []
+        movies: [],
+        isLoading: false
     },
     reducers: {},
     extraReducers: {
         [getHomePageMovies.fulfilled]: (state, action) => {
+            state.isLoading = false
             state.movies = action.payload;
+        },
+        [getHomePageMovies.pending]: (state) => {
+            state.isLoading = true
         }
     }
 });
