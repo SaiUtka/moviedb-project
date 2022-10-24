@@ -7,9 +7,13 @@ const getMovies = createAsyncThunk(
     'movieSlice/getMovies',
     async ({page, category}, {rejectWithValue}) => {
         try {
-            return await getCategoryMovies(page, category);
+            const response =  await getCategoryMovies(page, category);
+            if (!response.ok){
+                throw new Error('Server Error');
+            }
+            return response.json();
         } catch (e) {
-            rejectWithValue(e.response);
+            rejectWithValue(e.message);
         }
     }
 );

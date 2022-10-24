@@ -7,9 +7,13 @@ const getSearchMovies = createAsyncThunk(
     'searchSlice/getMovies',
     async ({value, page}, {rejectWithValue}) => {
         try {
-            return await getSearch(value, page);
+            const response =  await getSearch(value, page);
+            if (!response.ok) {
+                // throw new Error('Server Error');
+            }
+            return response.json();
         } catch (e) {
-            rejectWithValue(e.response);
+            rejectWithValue(e.message);
         }
     }
 );

@@ -17,7 +17,7 @@ function HomePage() {
 
     const searchMovies = useSelector(state => state.searchMovieReducer.movies.results);
 
-    const isLoading = useSelector(state => state.homePageReducer.isLoading)
+    const isLoading = useSelector(state => state.homePageReducer.isLoading);
 
     useEffect(() => {
         dispatch(getHomePageMovies({page}));
